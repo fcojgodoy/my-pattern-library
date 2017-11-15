@@ -30,7 +30,9 @@
         }
     },
     "assets": {
-        "css": [],
+        "css": [
+            "../assets/css/main.css"
+        ],
         "js": []
     },
     "font_libraries": {
@@ -55,9 +57,9 @@
             "title": "Buttons",
             "components": [
                 {
-                    "group": "buttons",
-                    "name": "default",
-                    "title": "Default buttons"
+                    "name": "primary",
+                    "title": "Primary button",
+                    "group": "buttons"
                 }
             ]
         }

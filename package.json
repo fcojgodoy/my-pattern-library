@@ -1,0 +1,11 @@
+{
+  "name": "astrum",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:fcojgodoy/my-pattern-library.git",
+  "author": "fcojgodoy <francisco.godoy@openmailbox.org>",
+  "license": "MIT",
+  "dependencies": {
+    "inuitcss": "^6.0.0-beta.5"
+  }
+}
