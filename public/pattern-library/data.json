@@ -53,6 +53,17 @@
     },
     "groups": [
         {
+            "name": "objects",
+            "title": "Objects",
+            "components": [
+                {
+                    "group": "objects",
+                    "name": "layout",
+                    "title": "Layout"
+                }
+            ]
+        },
+        {
             "name": "buttons",
             "title": "Buttons",
             "components": [
