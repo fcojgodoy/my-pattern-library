@@ -59,6 +59,7 @@
                 {
                     "name": "primary",
                     "title": "Primary button",
+                    "width": "half",
                     "group": "buttons"
                 }
             ]
