@@ -48,7 +48,7 @@ gulp.task('build', ['clean-dist', 'sass:build'], function () {
     .pipe(gulp.dest('dist'))
 });
 
-// Deleting any file inside the /src folder
+// Deleting any file inside the /dist folder
 gulp.task('clean-dist', function () {
   return del('dist/**/*.*');
 });
