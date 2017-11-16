@@ -1,4 +1,5 @@
 const gulp = require('gulp'),
+    del = require('del'),
     sass = require('gulp-sass'),
     autoprefixer = require('gulp-autoprefixer'),
     sourcemaps = require('gulp-sourcemaps'),
@@ -21,7 +22,7 @@ gulp.task('serve', ['sass'], function() {
 gulp.task('sass', function () {
   return gulp.src('sass/*.scss')
     .pipe(sourcemaps.init())
-    .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
+    .pipe(sass({outputStyle: 'nested'}).on('error', sass.logError))
     .pipe(autoprefixer({
             browsers: ['last 2 versions'],
             cascade: false
@@ -29,6 +30,27 @@ gulp.task('sass', function () {
     .pipe(sourcemaps.write('maps'))
     .pipe(gulp.dest('public/pattern-library/assets/css'))
     .pipe(browserSync.stream());
+});
+
+// Sass build task
+gulp.task('sass:build', function () {
+  return gulp.src('sass/*.scss')
+    .pipe(sass({outputStyle: 'compressed'}))
+    .pipe(gulp.dest('dist/pattern-library/assets/css'))
+});
+
+// Build task
+gulp.task('build', ['clean-dist', 'sass:build'], function () {
+  return gulp.src([
+      'public/**/*.*',
+      '!public/pattern-library/assets/css/*.*'
+  ])
+    .pipe(gulp.dest('dist'))
+});
+
+// Deleting any file inside the /src folder
+gulp.task('clean-dist', function () {
+  return del('dist/**/*.*');
 });
 
 // Default task
