@@ -1,6 +1,6 @@
 # My Patterns Library
 
-A merge of Astrum and Inuitcss for create patterns libraries, with Gulp process for:
+A merge of [Astrum](http://astrum.nodividestudio.com/) and [Inuitcss](https://github.com/inuitcss/inuitcss) for create patterns libraries, with [Gulp](https://gulpjs.com/) process for:
 
 - Use SASS
 - Create sourcemaps
@@ -14,14 +14,15 @@ A merge of Astrum and Inuitcss for create patterns libraries, with Gulp process 
 These instructions get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
 
 ### Clone the project
+
 `git clone https://github.com/fcojgodoy/my-pattern-library.git`
 
 ### Prerequisites
 
 Install global dependencies:
+
 - [Yarn](https://yarnpkg.com/)
 - [Gulp](https://gulpjs.com/)
-
 
 ### Installing
 
@@ -29,9 +30,9 @@ Install local dependencies:
 
 `yarn`
 
-## Running for development
+### Running for development
 
-Compile assets when file changes are made, start Browsersync session
+Compile assets when file changes are made, start Browsersync session:
 
 `gulp serve`
 
@@ -56,7 +57,7 @@ We use [SemVer](http://semver.org/) for versioning. For the versions available, 
 
 * **Francisco Godoy** - *Initial work* - [fcojgodoy](https://github.com/fcojgodoy)
 
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
+See also the list of [contributors](https://github.com/fcojgodoy/my-pattern-library/graphs/contributors) who participated in this project.
 
 ## License
 
