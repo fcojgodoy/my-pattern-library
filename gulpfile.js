@@ -5,15 +5,6 @@ const gulp = require('gulp'),
     browserSync = require('browser-sync').create();
 
 // Static Server task + watching scss/html files
-// gulp.task('serve', ['sass'], function() {
-//
-//     browserSync.init({
-//         server: 'public/pattern-library'
-//     });
-//
-//     gulp.watch('sass/**/*.scss', ['sass']);
-//     gulp.watch('public/pattern-library/**/*.html').on('change', browserSync.reload);
-// });
 gulp.task('serve', ['sass'], function() {
     browserSync.init({
         server: 'public/pattern-library'
@@ -26,15 +17,10 @@ gulp.task('serve', ['sass'], function() {
     ]).on('change', browserSync.reload);
 })
 
-// Sass compiler task with:
-// - Sass output styles
-// - Sass error log
-// - autoprefiser
-// - sourcemaps
-// - browser-sync stream
+// Sass compiler task
 gulp.task('sass', function () {
   return gulp.src('sass/*.scss')
-    // .pipe(sourcemaps.init())
+    .pipe(sourcemaps.init())
     .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
     .pipe(autoprefixer({
             browsers: ['last 2 versions'],
@@ -45,16 +31,7 @@ gulp.task('sass', function () {
     .pipe(browserSync.stream());
 });
 
-// Watch task
-// gulp.task('sass:watch', function () {
-//   gulp.watch('sass/**/*.scss', ['sass']);
-// });
-// gulp.task('watch', ['serve'], function () {
-//     gulp.watch('sass/**/*.scss', ['sass']);
-//     gulp.watch('public/pattern-library/**/*.html').on('change', browserSync.reload);
-// });
-
 // Default task
 gulp.task('default', function() {
-  console.log('View gulpfile for Gulp tasks');
+  console.log('THERE ISN\'T DEFAULT TASK. View gulpfile.js for Gulp tasks');
 });
