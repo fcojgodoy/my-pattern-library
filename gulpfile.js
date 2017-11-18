@@ -5,31 +5,33 @@ const gulp = require('gulp'),
     sourcemaps = require('gulp-sourcemaps'),
     browserSync = require('browser-sync').create();
 
+// Sass compiler task
+gulp.task('sass', function () {
+  return gulp.src('./public/app/styles/*.scss')
+    .pipe(sourcemaps.init())
+    .pipe(sass().on('error', sass.logError))
+    .pipe(autoprefixer({
+            browsers: ['last 2 versions'],
+            cascade: false
+        }))
+    .pipe(sourcemaps.write('.'))
+    // TODO: Duplicate dest if we want a copy for the app
+    .pipe(gulp.dest('public/pattern-library/assets/css'))
+    .pipe(browserSync.stream());
+});
+
 // Static Server task + watching scss/html files
 gulp.task('serve', ['sass'], function() {
     browserSync.init({
         server: 'public/pattern-library'
     });
 
-    gulp.watch('sass/**/*.scss', ['sass']);
+    gulp.watch('./public/app/styles/**/*.scss', ['sass']);
     gulp.watch('public/pattern-library/**/*.html')
-        .on('change', browserSync.reload);
+    .on('change', browserSync.reload);
 })
 
-// Sass compiler task
-gulp.task('sass', function () {
-  return gulp.src('sass/*.scss')
-    .pipe(sourcemaps.init())
-    .pipe(sass({outputStyle: 'nested'}).on('error', sass.logError))
-    .pipe(autoprefixer({
-            browsers: ['last 2 versions'],
-            cascade: false
-        }))
-    .pipe(sourcemaps.write('maps'))
-    .pipe(gulp.dest('public/pattern-library/assets/css'))
-    .pipe(browserSync.stream());
-});
-
+// TODO: Remade build task
 // Sass build task
 gulp.task('sass:build', function () {
   return gulp.src('sass/*.scss')
