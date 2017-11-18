@@ -12,10 +12,8 @@ gulp.task('serve', ['sass'], function() {
     });
 
     gulp.watch('sass/**/*.scss', ['sass']);
-    gulp.watch([
-        'public/pattern-library/assets/css/*.css',
-        'public/pattern-library/**/*.html'
-    ]).on('change', browserSync.reload);
+    gulp.watch('public/pattern-library/**/*.html')
+        .on('change', browserSync.reload);
 })
 
 // Sass compiler task
