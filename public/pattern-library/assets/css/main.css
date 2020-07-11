@@ -3197,9 +3197,10 @@ table {
 .u-hidden {
   display: none !important; }
 
-.c-sample {
+.ndpl-component__sample {
   background-color: #fff; }
-  .c-sample .o-layout__item .o-box {
+  .ndpl-component__sample .o-box,
+  .ndpl-component__sample .o-block {
     background-color: #d6a5e3;
     margin-bottom: 24px; }
 

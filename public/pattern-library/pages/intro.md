@@ -1,3 +1,6 @@
 # Introduction
+**This is intended as a guide to understand and use [InuitCss](https://github.com/inuitcss/inuitcss).**
 
-Add your intro copy in `./pages/intro.md` or alternatively if you do not want a intro (or any other) page set `content` in your `data.json` file to `null`.
+**Feel free to help their improvement. // TODO: link to github repo**
+
+# ![inuitcss](http://inuitcss.com/img/logo.png)

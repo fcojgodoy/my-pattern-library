@@ -1,0 +1,3 @@
+Strip list-like appearance from lists by removing their bullets and any indentation.
+
+Note: Declaring the item class might not be necessary everywhere, but is for example in `<dl>` lists for the `<dd>` children.

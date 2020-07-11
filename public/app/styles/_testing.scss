@@ -1,8 +1,9 @@
-.c-sample {
-  background-color: #fff;
+.ndpl-component__sample {
+    background-color: #fff;
 
-  .o-layout__item .o-box {
-    background-color: rgb(214, 165, 227);
-    margin-bottom: $inuit-global-spacing-unit;
-  }
+    .o-box,
+    .o-block {
+        background-color: rgb(214, 165, 227);
+        margin-bottom: $inuit-global-spacing-unit;
+    }
 }

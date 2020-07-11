@@ -48,30 +48,155 @@
                 "name": "introduction",
                 "title": "Introduction",
                 "file": "./pages/intro.md"
+            },
+            {
+                "name": "readme",
+                "title": "InuitCss Readme",
+                "file": "./pages/readme.md"
+            },
+            {
+                "name": "settings",
+                "title": "Settings",
+                "file": "./pages/settings.md"
+            },
+            {
+                "name": "generic",
+                "title": "Generic",
+                "file": "./pages/generic.md"
+            },
+            {
+                "name": "tools",
+                "title": "Tools",
+                "file": "./pages/tools.md"
             }
         ]
     },
     "groups": [
+        {
+            "name": "elements",
+            "title": "Elements",
+            "components": [
+                {
+                    "group": "elements",
+                    "name": "page",
+                    "title": "Page",
+                    "options": {
+                        "disable_code_sample": true
+                    }
+                },
+                {
+                    "name": "headings",
+                    "title": "Headings",
+                    "width": "half",
+                    "group": "elements"
+                },
+                {
+                    "group": "elements",
+                    "name": "tables",
+                    "title": "Tables",
+                    "width": "half"
+                },
+                {
+                    "group": "elements",
+                    "name": "images",
+                    "title": "Images"
+                }
+            ]
+        },
         {
             "name": "objects",
             "title": "Objects",
             "components": [
                 {
                     "group": "objects",
+                    "name": "wrapper",
+                    "title": "Wrapper"
+                },
+                {
+                    "group": "objects",
                     "name": "layout",
                     "title": "Layout"
+                },
+                {
+                    "group": "objects",
+                    "name": "box",
+                    "title": "Box",
+                    "width": "half"
+                },
+                {
+                    "name": "block",
+                    "title": "Block",
+                    "width": "half",
+                    "group": "objects"
+                },
+                {
+                    "group": "objects",
+                    "name": "ratio",
+                    "title": "Ratio",
+                    "width": "half"
+                },
+                {
+                    "group": "objects",
+                    "name": "crop",
+                    "title": "Crop"
+                },
+                {
+                    "group": "objects",
+                    "name": "media",
+                    "title": "Media",
+                    "width": "half"
+                },
+                {
+                    "name": "flag",
+                    "title": "Flag",
+                    "width": "half",
+                    "group": "objects"
+                },
+                {
+                    "group": "objects",
+                    "name": "pack",
+                    "title": "Pack",
+                    "width": "half"
+                },
+                {
+                    "group": "objects",
+                    "name": "table",
+                    "title": "Table"
+                },
+                {
+                    "group": "objects",
+                    "name": "list-bare",
+                    "title": "List bare",
+                    "width": "half"
+                },
+                {
+                    "group": "objects",
+                    "name": "list-inline",
+                    "title": "List inline",
+                    "width": "half"
                 }
             ]
         },
         {
-            "name": "buttons",
-            "title": "Buttons",
+            "name": "utilities",
+            "title": "Utilities",
+            "components": [
+                {
+                    "group": "utilities",
+                    "name": "headings",
+                    "title": "Headings"
+                }
+            ]
+        },
+        {
+            "name": "components",
+            "title": "Components",
             "components": [
                 {
                     "name": "primary",
                     "title": "Primary button",
                     "width": "half",
-                    "group": "buttons"
+                    "group": "components"
                 }
             ]
         }
